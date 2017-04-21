@@ -4,7 +4,7 @@
 #
 Name     : R-repr
 Version  : 0.12.0
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/repr_0.12.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/repr_0.12.0.tar.gz
 Summary  : Serializable Representations
@@ -20,12 +20,15 @@ repr&emsp;[![Build Status](https://travis-ci.org/IRkernel/repr.svg?branch=master
 %setup -q -c -n repr
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1491609537
+export SOURCE_DATE_EPOCH=1492801556
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1491609537
+export SOURCE_DATE_EPOCH=1492801556
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -41,7 +44,7 @@ R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library repr
 
@@ -51,6 +54,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/repr/DESCRIPTION
 /usr/lib64/R/library/repr/INDEX
 /usr/lib64/R/library/repr/Meta/Rd.rds
+/usr/lib64/R/library/repr/Meta/features.rds
 /usr/lib64/R/library/repr/Meta/hsearch.rds
 /usr/lib64/R/library/repr/Meta/links.rds
 /usr/lib64/R/library/repr/Meta/nsInfo.rds
