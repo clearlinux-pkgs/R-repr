@@ -1,4 +1,5 @@
-0.18
+0.19.1
 R-base64enc
 R-htmltools
+R-jsonlite
 R-rlang
