@@ -4,7 +4,7 @@
 #
 Name     : R-repr
 Version  : 0.19.2
-Release  : 37
+Release  : 38
 URL      : https://cran.r-project.org/src/contrib/repr_0.19.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/repr_0.19.2.tar.gz
 Summary  : String and binary representations of objects for several formats / mime types
