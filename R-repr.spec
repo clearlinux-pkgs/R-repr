@@ -4,18 +4,16 @@
 #
 Name     : R-repr
 Version  : 0.19.2
-Release  : 39
+Release  : 40
 URL      : https://cran.r-project.org/src/contrib/repr_0.19.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/repr_0.19.2.tar.gz
 Summary  : String and binary representations of objects for several formats / mime types
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-base64enc
-Requires: R-htmltools
-Requires: R-jsonlite
 BuildRequires : R-base64enc
 BuildRequires : R-htmltools
 BuildRequires : R-jsonlite
+BuildRequires : R-rlang
 BuildRequires : buildreq-R
 
 %description
@@ -34,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549468952
+export SOURCE_DATE_EPOCH=1556484070
 
 %install
-export SOURCE_DATE_EPOCH=1549468952
+export SOURCE_DATE_EPOCH=1556484070
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
