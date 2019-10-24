@@ -4,10 +4,10 @@
 #
 Name     : R-repr
 Version  : 1.0.1
-Release  : 45
+Release  : 46
 URL      : https://cran.r-project.org/src/contrib/repr_1.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/repr_1.0.1.tar.gz
-Summary  : Serializable Representations
+Summary  : String and binary representations of objects for several formats / mime types
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-base64enc
@@ -19,9 +19,15 @@ BuildRequires : R-htmltools
 BuildRequires : R-jsonlite
 BuildRequires : R-pillar
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-mime types.
+repr&emsp;[![b-Travis]][Travis] [![b-CRAN]][CRAN]
+====
+[b-Travis]: https://travis-ci.org/IRkernel/repr.svg?branch=master "Build status"
+[Travis]: https://travis-ci.org/IRkernel/repr
+[b-CRAN]: https://www.r-pkg.org/badges/version/repr "Comprehensive R Archive Network"
+[CRAN]: https://cran.r-project.org/package=repr
 
 %prep
 %setup -q -c -n repr
@@ -31,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562207875
+export SOURCE_DATE_EPOCH=1571888484
 
 %install
-export SOURCE_DATE_EPOCH=1562207875
+export SOURCE_DATE_EPOCH=1571888484
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
