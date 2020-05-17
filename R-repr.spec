@@ -4,10 +4,10 @@
 #
 Name     : R-repr
 Version  : 1.1.0
-Release  : 51
+Release  : 52
 URL      : https://cran.r-project.org/src/contrib/repr_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/repr_1.1.0.tar.gz
-Summary  : String and binary representations of objects for several formats / mime types
+Summary  : Serializable Representations
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-base64enc
@@ -21,30 +21,26 @@ BuildRequires : R-pillar
 BuildRequires : buildreq-R
 
 %description
-repr&emsp;[![b-Travis]][Travis] [![b-CRAN]][CRAN]
-====
-[b-Travis]: https://travis-ci.org/IRkernel/repr.svg?branch=master "Build status"
-[Travis]: https://travis-ci.org/IRkernel/repr
-[b-CRAN]: https://www.r-pkg.org/badges/version/repr "Comprehensive R Archive Network"
-[CRAN]: https://cran.r-project.org/package=repr
+mime types.
 
 %prep
 %setup -q -c -n repr
+cd %{_builddir}/repr
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580228831
+export SOURCE_DATE_EPOCH=1589757678
 
 %install
-export SOURCE_DATE_EPOCH=1580228831
+export SOURCE_DATE_EPOCH=1589757678
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
