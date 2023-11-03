@@ -4,7 +4,7 @@
 #
 Name     : R-repr
 Version  : 1.1.6
-Release  : 78
+Release  : 79
 URL      : https://cran.r-project.org/src/contrib/repr_1.1.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/repr_1.1.6.tar.gz
 Summary  : Serializable Representations
